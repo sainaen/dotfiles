@@ -1,0 +1,11 @@
+[user]
+	name = sainaen
+	email = sainaen@gmail.com
+[color]
+	ui = always
+	status = always
+	grep = always
+	diff = always
+	interactive = always
+[alias]
+	co = checkout
