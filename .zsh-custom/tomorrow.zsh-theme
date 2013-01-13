@@ -1,11 +1,12 @@
 # ------------------------------------------------------------------------
-# Juan G. Hurtado oh-my-zsh theme
+# Tomorrow
+#
+# Based on Juan G. Hurtado oh-my-zsh theme
 # (Needs Git plugin for current_branch method)
 # ------------------------------------------------------------------------
 
-local default_username='kaener'
-local default_host='vika'
-
+local default_username='%USER_NAME HERE%'
+local default_host='%HOST_NAME HERE%'
 
 # Color shortcuts
 RED=$fg[red]
@@ -41,7 +42,7 @@ ZSH_THEME_GIT_PROMPT_ADDED=" %{$GREEN%}added"
 ZSH_THEME_GIT_PROMPT_UNTRACKED=" %{$WHITE%}untracked"
 
 # Format for git_prompt_ahead()
-ZSH_THEME_GIT_PROMPT_AHEAD=" %{$MAGENTA_BOLD%}(!)"
+ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED_BOLD%}(!)"
 
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$YELLOW%}"
@@ -51,8 +52,6 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 username() {
 	if [[ $USER != $default_username || $HOST != $default_host ]]; then echo '%n@%m:'; fi
 }
-
-time="%(?.%{$GREEN%}.%{$RED%})<%*>%{$RESET_COLOR%}"
 
 # Prompt format
 PROMPT='
