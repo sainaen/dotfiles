@@ -14,7 +14,11 @@ COMPLETION_WAITING_DOTS="true"
 # Plugins
 plugins=(git debian npm coffee cake autojump extract zsh-syntax-highlighting)
 
+# Oh my zsh export
 source $ZSH/oh-my-zsh.sh
+
+# Functions export
+source $HOME/.functions
 
 # Enable colors in terminal
 TERM="xterm-256color"
