@@ -8,7 +8,7 @@ This repository's kind of the cherry-picks from home folder. So it's nead to be 
 At this point, it contains:
 
 * Sublime Text 2 preferences file
-* Global `.gitconfig` <small>(without aliases so far)</small>
+* Global `.gitconfig` <small>(with a bunch of aliases)</small> and `.gitignore`
 * [Tomorrow](https://github.com/chriskempson/tomorrow-theme) profile for gnome-terminal and script to setup colors in it
 
 As submodules:
