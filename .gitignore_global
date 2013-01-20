@@ -41,5 +41,10 @@ Thumbs.db
 out/*
 
 # Maven compile folder #
-#########################
+########################
 target/*
+
+# Sublime project files #
+#########################
+*.sublime-project
+*.sublime-workspace
