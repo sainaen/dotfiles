@@ -17,11 +17,11 @@
 # Common aliases
 	co = checkout
 	st = status -s
+	a = add -i
 	c = commit
 	r = reset
 	rh = reset --hard
 	br = branch
-	df = diff --word-diff
 # Stash
 	sl = stash list
 	ss = stash save
