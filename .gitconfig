@@ -26,5 +26,9 @@
 	sl = stash list
 	ss = stash save
 	sa = stash apply
+# Ignore
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep '^[a-z]'
 # List all aliases
 	la = "!git config -l | grep alias | cut -c 7-"
