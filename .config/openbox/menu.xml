@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal emulator">
+			<action name="Execute">
+				<execute>
+					x-terminal-emulator
+				</execute>
+			</action>
+		</item>
+		<item label="Chrome">
+			<action name="Execute">
+				<execute>google-chrome</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="other-menu" label="Other">
+			<item label="FBReader">
+				<action name="Execute">
+					<execute>
+						fbreader
+					</execute>
+				</action>
+			</item>
+			<item label="KeePassX">
+				<action name="Execute">
+					<execute>
+						keepassx
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="text-menu" label="Text">
+			<item label="Sublime2">
+				<action name="Execute">
+					<execute>
+						sublime
+					</execute>
+				</action>
+			</item>
+			<item label="Gedit">
+				<action name="Execute">
+					<execute>
+						gedit
+					</execute>
+				</action>
+			</item>
+		</menu>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<item label="Thunar">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="client-list-menu"/>
+		<separator/>
+		<menu id="conf-menu" label="Configuration">
+			<item label="ObConf">
+				<action name="Execute">
+					<execute>
+						obconf
+					</execute>
+				</action>
+			</item>
+			<item label="ObMenu">
+				<action name="Execute">
+					<execute>
+						obmenu
+					</execute>
+				</action>
+			</item>
+			<item label="Tint2Config">
+				<action name="Execute">
+					<execute>
+						tint2conf
+					</execute>
+				</action>
+			</item>
+			<item label="Restart">
+				<action name="Restart"/>
+			</item>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>
