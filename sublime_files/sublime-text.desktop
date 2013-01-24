@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Sublime Text 2
+StartupNotify=true
+GenericName=Text Editor
+Comment=Great text editor
+Icon=/opt/sublime_text/Icon/Custom/sublime_512x512.png
+Exec=/usr/local/bin/sublime_text %U
+MimeType=text/plain;text/x-chdr;text/x-csrc;text/x-c++hdr;text/x-c++src;text/x-java;text/x-dsrc;text/x-pascal;text/x-perl;text/x-python;application/x-php;application/x-httpd-php3;application/x-httpd-php4;application/x-httpd-php5;application/xml;text/html;text/css;text/x-sql;text/x-diff;inode/directory;
+Categories=GNOME;GTK;Utility;TextEditor;Application;Development
