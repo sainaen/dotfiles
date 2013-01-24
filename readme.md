@@ -7,9 +7,12 @@ This repository's kind of the cherry-picks from home folder. So it's nead to be 
 ## In it
 At this point, it contains:
 
-* Sublime Text 2 preferences file
+* Sublime Text 2 preferences file, custom icon and `.desktop` file for it
 * Global `.gitconfig` <small>(with a bunch of aliases)</small> and `.gitignore`
 * [Tomorrow](https://github.com/chriskempson/tomorrow-theme) profile for gnome-terminal and script to setup colors in it
+* `functions.sh` file with a small handy shell functions (like python simple http server)
+* Openbox config (`autostart.sh` and menu)
+* My [tint2](code.google.com/p/tint2/) theme
 
 As submodules:
 
