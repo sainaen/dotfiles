@@ -18,3 +18,8 @@ As submodules:
 
 * [zsh-syntax-highlighting plugin](https://github.com/zsh-users/zsh-syntax-highlighting)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+## Notes and hints
+
+* `sublime_files/sublime_text.desktop` should be placed in `/usr/share/applications/`
+* to clone repository with all submodules use `git clone --recursive`
