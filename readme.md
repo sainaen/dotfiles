@@ -23,3 +23,11 @@ As submodules:
 
 * `sublime_files/sublime_text.desktop` should be placed in `/usr/share/applications/`
 * to clone repository with all submodules use `git clone --recursive`
+
+## ToDo
+
+* add list of existing aliases (git aliases too) with short description for each of them
+* write a shell script to copy files
+* add `.fonts.conf`?
+* add config files for Sublime packages (e.g. SublimeBuildOnSave)
+* add custom Sublime build system for cakefiles
