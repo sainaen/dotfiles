@@ -13,6 +13,7 @@ At this point, it contains:
 * `functions.sh` file with a small handy shell functions (like python simple http server)
 * Openbox config (`autostart.sh` and menu)
 * My [tint2](code.google.com/p/tint2/) theme
+* Midnight Commander config file <small>(now only difference is a `xoria256` as skin)</small>
 
 As submodules:
 
