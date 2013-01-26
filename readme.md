@@ -32,3 +32,4 @@ As submodules:
 * add `.fonts.conf`?
 * add config files for Sublime packages (e.g. SublimeBuildOnSave)
 * add custom Sublime build system for cakefiles
+* learn some cools tricks from other's dotfiles (for example [Ben Alman](https://github.com/cowboy/dotfiles) and [Mathias Bynens](https://github.com/mathiasbynens/dotfiles) have great dotfiles)
