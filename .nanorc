@@ -1,0 +1,11 @@
+# Scroll line-by-line, not block-by-block
+set smooth
+
+# Indent new lines to the previous line’s indentation
+set autoindent
+
+# Soft wraps
+set softwrap
+
+# Enable the use of the mouse
+set mouse
