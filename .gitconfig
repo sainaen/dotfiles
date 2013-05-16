@@ -2,17 +2,20 @@
 	name = sainaen
 	email = sainaen@gmail.com
 [color]
-	ui = always
+	ui = always                        # always use colours
 [core]
-	editor = nano
-	excludesfile = ~/.gitignore_global
+	editor = vim                       # editor
+	excludesfile = ~/.gitignore_global # global .gitignore file
+	fileMode = false                   # ignore file rights changes
+[merge]
+	summary = true                     # add commits summary when merging
+	tool = meld                        # use meld as mergetool
+[push]
+	default = tracking                 # 'git push' will push only the current branch
 [alias]
 # Log
-	lg = log --graph --pretty=format:'%C(yellow)%h %Creset%s %Cblue[%cn]' --decorate
 	l = log --pretty=format:'%C(yellow)%h %Creset%s %Cblue[%cn]' --decorate
 	ll = log --graph --oneline --decorate --all
-	last = log -1 HEAD
-	lastf = log -1 --numstat HEAD
 	lastdiff = diff --cached --word-diff HEAD^
 # Common aliases
 	co = checkout
@@ -21,7 +24,12 @@
 	c = commit
 	r = reset
 	rh = reset --hard
-	br = branch
+	mt = mergetool
+	dt = !git-diffall                  # https://github.com/thenigan/git-diffall required
+# Branches
+	br = branch --verbose
+	bra = branch --verbose -a          # all branches
+	brm = branch --verbose -d          # delete branch
 # Stash
 	sl = stash list
 	ss = stash save
@@ -30,5 +38,11 @@
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep '^[a-z]'
+# Undo
+	uncommit = reset --soft HEAD^
+	uc = uncommit
+	unstage = reset HEAD
+	unadd = unstage
+	us = unstage
 # List all aliases
 	la = "!git config -l | grep alias | cut -c 7-"
