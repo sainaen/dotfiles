@@ -20,3 +20,5 @@ source $ZSH/oh-my-zsh.sh
 # Functions export
 source $HOME/.functions
 
+# Aliases export
+source $HOME/.aliases
