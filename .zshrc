@@ -20,5 +20,3 @@ source $ZSH/oh-my-zsh.sh
 # Functions export
 source $HOME/.functions
 
-# Enable colors in terminal
-TERM="xterm-256color"
