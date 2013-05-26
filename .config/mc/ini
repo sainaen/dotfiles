@@ -78,7 +78,7 @@ editor_backup_extension=~
 mcview_eof=
 ignore_ftp_chattr_errors=true
 keymap=mc.keymap
-skin=xoria256
+skin=modarin256-defbg-thin
 
 
 
