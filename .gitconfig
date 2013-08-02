@@ -10,29 +10,38 @@
 [merge]
 	summary = true                     # add commits summary when merging
 	tool = meld                        # use meld as mergetool
+
 [push]
-	default = tracking                 # 'git push' will push only the current branch
+	# 'git push' will push the current branch to its tracking branch
+	# the usual default is to push all branches
+	default = tracking
 [alias]
 # Log
-	l = log --pretty=format:'%C(yellow)%h %Creset%s %Cblue[%cn]' --decorate
-	ll = log --graph --oneline --decorate --all
-	lastdiff = diff --cached --word-diff HEAD^
+	l = log --oneline --decorate --all
+	lg = log --oneline --decorate --all --graph
+	ll = log --pretty=format:'%C(yellow)%h %C(reset)%s %C(blue)%cn %C(cyan)%ar' --all
+	llg = log --pretty=format:'%C(yellow)%h %C(reset)%s %C(blue)%cn %C(cyan)%ar' --all --graph
+	lp = log --patch -1 # latest commit patch
+	dc = diff --staged
 # Common aliases
 	co = checkout
 	st = status -s
 	a = add -i
 	c = commit
+	ca = commit --amend
 	r = reset
 	rh = reset --hard
+	dt = !git-diffall
+	mf = merge --no-ff -e
 	mt = mergetool
-	dt = !git-diffall                  # https://github.com/thenigan/git-diffall required
+	rc = rebase --continue
 # Branches
 	br = branch --verbose
-	bra = branch --verbose -a          # all branches
-	brm = branch --verbose -d          # delete branch
+	bra = branch --verbose -a           # all branches
+	brm = branch --verbose -d           # delete branch
 # Stash
 	sl = stash list
-	ss = stash save
+	ss = stash save --include-untracked # Stash untracked files too
 	sa = stash apply
 # Ignore
 	ignore = update-index --assume-unchanged
@@ -46,3 +55,5 @@
 	us = unstage
 # List all aliases
 	la = "!git config -l | grep alias | cut -c 7-"
+[help]
+	autocorrect = 1
