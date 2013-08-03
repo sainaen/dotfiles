@@ -12,7 +12,7 @@ ZSH_THEME="tomorrow"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git debian npm coffee cake autojump extract zsh-syntax-highlighting)
+plugins=(git autojump zsh-syntax-highlighting npm)
 
 # Oh my zsh export
 source $ZSH/oh-my-zsh.sh
