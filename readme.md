@@ -1,8 +1,13 @@
 ## About
 
-This repository's kind of the cherry-picks from home folder. So it's nead to be cloned with command like this:
+It’s nead to be cloned with command like this:
 
-	git clone https://github.com/sainaen/dotfiles.git ~/
+	git clone https://github.com/sainaen/dotfiles.git ~/dotfiles
+
+And then **before** you will restart your terminal, execute setup script form .scripts folder
+
+	chmod +x ~/dotfiles/scripts/setup-oh-my-zsh.sh
+	[Alt+., Enter]
 
 ## In it
 At this point, it contains:
@@ -15,7 +20,7 @@ At this point, it contains:
 * My [tint2](code.google.com/p/tint2/) theme
 * Midnight Commander config file <small>(now only difference is a `xoria256` as skin)</small>
 
-As submodules:
+Depends on:
 
 * [zsh-syntax-highlighting plugin](https://github.com/zsh-users/zsh-syntax-highlighting)
 * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
@@ -23,7 +28,6 @@ As submodules:
 ## Notes and hints
 
 * `sublime_files/sublime_text.desktop` should be placed in `/usr/share/applications/`
-* to clone repository with all submodules use `git clone --recursive`
 
 ## ToDo
 
