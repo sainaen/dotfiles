@@ -15,13 +15,11 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"indent_guide_options":
 	[
 		"draw_active"
 	],
-	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		72,
