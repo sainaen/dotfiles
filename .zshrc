@@ -27,3 +27,5 @@ if [ \( "x$COLORTERM" = "xgnome-terminal" -o "x$COLORTERM" = "xTerminal" -o "x$C
         infocmp xterm-256color >/dev/null 2>&1; then
     TERM=xterm-256color
 fi
+
+export JDK_HOME="/usr/lib/jvm/java-7-oracle"
