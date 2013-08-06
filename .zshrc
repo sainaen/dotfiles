@@ -23,8 +23,12 @@ source $HOME/.functions
 # Aliases export
 source $HOME/.aliases
 
-if [ \( "x$COLORTERM" = "xgnome-terminal" -o "x$COLORTERM" = "xTerminal" -o "x$COLORTERM" = "xxfce4-terminal" \) -a "x$TERM" = "xxterm" ] &&
-        infocmp xterm-256color >/dev/null 2>&1; then
+# Use fancy ZSH completion
+zstyle ':completion:*' expand prefix suffix
+
+# Workaround for this bug in xfce4-terminal: https://bugs.launchpad.net/ubuntu/+source/xfce4-terminal/+bug/778801
+# where TERM always set to 'xterm' ignoring preferences
+if [ \( "x$COLORTERM" = "xgnome-terminal" -o "x$COLORTERM" = "xTerminal" -o "x$COLORTERM" = "xxfce4-terminal" \) -a "x$TERM" = "xxterm" ] && infocmp xterm-256color >/dev/null 2>&1; then
     TERM=xterm-256color
 fi
 
