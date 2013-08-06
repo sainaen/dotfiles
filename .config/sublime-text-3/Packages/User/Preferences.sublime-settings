@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
 	"default_line_ending": "unix",
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -15,7 +15,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Markdown Preview"
+		"SublimeLinter Beta",
+		"Theme - Soda",
+		"SublimeGit",
+		"Emmet"
 	],
 	"indent_guide_options":
 	[
@@ -29,5 +32,5 @@
 	"tab_size": 4,
 	"translate_tabs_to_spaces": false,
 	"trim_automatic_white_space": true,
-	"trim_trailing_white_space_on_save": false
+	"trim_trailing_white_space_on_save": true
 }
