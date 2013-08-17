@@ -1,3 +1,4 @@
 alias nano="vim"
 alias l="/bin/ls -l --almost-all --color=always --file-type --human-readable --group-directories-first"
+alias mbld="mvn -DskipTests clean package"
 
