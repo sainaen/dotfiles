@@ -1,24 +1,48 @@
 {
+    "sublimelinter_mark_style": "outline",
+    "sublimelinter_gutter_marks_theme": "bright",
 	"sublimelinter_popup_errors_on_save": true,
 	"jshint_options": {
         // To fix column positions for JSHint errors you may want to add `"indent": 1` to your
         // **User** "jshint_options". This issue affects users with tabs for indentation.
         // This fix was reverted due to a conflict with using the `"white": true` option.
         // "indent": 1,
+        "browser": "defines globals exposed by browser: document, window, navigator",
         "browser": true,
+        "curly": "requires you to always put curly braces around blocks in loops and conditionals",
         "curly": true,
-        "evil": true,
-        "jquery": true,
+        "latedef": "prohibits the use of a variable before it was defined",
+        "latedef": true,
+        "maxdepth": "lets you control how nested do you want your blocks to be",
         "maxdepth": 5,
-        "maxlen": 80,
+        "maxlen": "lets you set the maximum length of a line",
+        "maxlen": 120,
+        "maxstatements": "lets you set the max number of statements allowed per function",
         "maxstatements": 30,
+        "noarg": "prohibits the use of arguments.caller and arguments.callee",
         "noarg": true,
+        "nonew": "prohibits the use of constructor functions for side-effects",
         "nonew": true,
-        "quotmark": true,
-        "sub": true,
+        "quotmark": "enforces the consistency of quotation marks",
+        "quotmark": "double",
+        "strict": "requires all functions to run in ECMAScript 5's strict mode",
+        "strict": true,
+        "trailing": "makes it an error to leave a trailing whitespace in your code",
         "trailing": true,
-        "regexdash": true,
+        "undef": "prohibits the use of explicitly undeclared variables",
+        "undef": true,
+        "unused": "warns when you define and never use your variables",
         "unused": true,
-        "wsh": true
+
+        "sub": "suppresses warnings about using [] notation when it can be expressed in dot notation",
+        "sub": true,
+
+        "globals": {
+            "App": false,
+            "jQuery": false,
+            "$": false,
+            "Backbone": false,
+            "_": false
+        }
     }
 }
