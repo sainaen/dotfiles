@@ -27,6 +27,8 @@
 	co = checkout
 	st = status -s
 	a = add -i
+	au = add -u
+	aa = add -A
 	c = commit
 	ca = commit --amend
 	r = reset
