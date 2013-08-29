@@ -19,8 +19,8 @@
 # Log
 	l = log --oneline --decorate --all
 	lg = log --oneline --decorate --all --graph
-	ll = log --pretty=format:'%C(yellow)%h %C(reset)%s %C(blue)%cn %C(cyan)%ar' --all
-	llg = log --pretty=format:'%C(yellow)%h %C(reset)%s %C(blue)%cn %C(cyan)%ar' --all --graph
+	ll = log --pretty=format:'%C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar' --all
+	llg = log --pretty=format:'%C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar' --all --graph
 	lp = log --patch -1 # latest commit patch
 	dc = diff --staged
 # Common aliases
