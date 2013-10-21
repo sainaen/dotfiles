@@ -51,10 +51,8 @@
 	ignored = !git ls-files -v | grep '^[a-z]'
 # Undo
 	uncommit = reset --soft HEAD^
-	uc = uncommit
 	unstage = reset HEAD
 	unadd = unstage
-	us = unstage
 # List all aliases
 	la = "!git config -l | grep alias | cut -c 7-"
 [help]
