@@ -8,3 +8,11 @@ function pyserv() {
 function openports() {
 	netstat -lnptu
 }
+
+function add_key() {
+	if [ ! -z $1 ]
+	then
+		gpg --keyserver subkeys.pgp.net --recv-keys "$1"
+		gpg -a --export "$1" | sudo apt-key add -
+	fi
+}
