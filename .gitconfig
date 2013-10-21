@@ -26,21 +26,21 @@
 # Common aliases
 	co = checkout
 	st = status --short --branch
-	a = add -i
-	au = add -u
-	aa = add -A
+	a = add --interactive
+	au = add --update
+	aa = add --all
 	c = commit
 	ca = commit --amend
 	r = reset
 	rh = reset --hard
 	dt = !git-diffall
-	mf = merge --no-ff -e
+	mf = merge --no-ff --edit
 	mt = mergetool
 	rc = rebase --continue
 # Branches
 	br = branch --verbose
-	bra = branch --verbose -a           # all branches
-	brm = branch --verbose -d           # delete branch
+	bra = branch --verbose --all           # all branches
+	brm = branch --verbose --delete           # delete branch
 # Stash
 	sl = stash list
 	ss = stash save --include-untracked # Stash untracked files too
