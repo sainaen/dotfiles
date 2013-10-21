@@ -25,7 +25,7 @@
 	dc = diff --staged
 # Common aliases
 	co = checkout
-	st = status -s
+	st = status --short --branch
 	a = add -i
 	au = add -u
 	aa = add -A
