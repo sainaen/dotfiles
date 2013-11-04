@@ -22,6 +22,7 @@
 	ll = log --pretty=format:'%C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar' --all
 	llg = log --pretty=format:'%C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar' --all --graph
 	lp = log --patch -1 # latest commit patch
+	d = diff
 	dc = diff --staged
 # Common aliases
 	co = checkout
@@ -50,9 +51,7 @@
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep '^[a-z]'
 # Undo
-	uncommit = reset --soft HEAD^
-	unstage = reset HEAD
-	unadd = unstage
+	uc = reset --soft HEAD^
 # List all aliases
 	la = "!git config -l | grep alias | cut -c 7-"
 [help]
