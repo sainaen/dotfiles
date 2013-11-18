@@ -15,12 +15,14 @@
 	# 'git push' will push the current branch to its tracking branch
 	# the usual default is to push all branches
 	default = tracking
+[pretty]
+	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar
 [alias]
 # Log
-	l = log --oneline --decorate --all
-	lg = log --oneline --decorate --all --graph
-	ll = log --pretty=format:'%C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar' --all
-	llg = log --pretty=format:'%C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar' --all --graph
+	l = log --oneline --format=complete
+	lg = log --oneline --format=complete --graph
+	ll = log --format=complete --all
+	llg = log --format=complete --all --graph
 	lp = log --patch -1 # latest commit patch
 	d = diff
 	dc = diff --staged
