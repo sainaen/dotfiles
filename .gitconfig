@@ -24,8 +24,6 @@
 	ll = log --format=complete --all
 	llg = log --format=complete --all --graph
 	lp = log --patch -1 # latest commit patch
-	d = diff
-	dc = diff --staged
 # Common aliases
 	co = checkout
 	st = status --short --branch
@@ -36,6 +34,9 @@
 	ca = commit --amend
 	r = reset
 	rh = reset --hard
+	pf = push --force
+	d = diff
+	dc = diff --staged
 	dt = !git-diffall
 	mf = merge --no-ff --edit
 	mt = mergetool
