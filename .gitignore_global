@@ -36,13 +36,18 @@ Thumbs.db
 
 # IntelliJ IDEA #
 #################
-.idea/*
+.idea/
 *.iml
-out/*
+out/
 
 # Maven compile folder #
 ########################
-target/*
+target/
+
+# Gradle folders #
+##################
+build/
+.gradle
 
 # Sublime project files #
 #########################
