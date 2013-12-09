@@ -53,3 +53,7 @@ build/
 #########################
 *.sublime-project
 *.sublime-workspace
+
+# Vim temp file #
+#################
+*.swp
