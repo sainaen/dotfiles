@@ -12,7 +12,7 @@ ZSH_THEME="tomorrow"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git autojump zsh-syntax-highlighting npm)
+plugins=(git zsh-syntax-highlighting)
 
 # Oh my zsh export
 source $ZSH/oh-my-zsh.sh
@@ -31,8 +31,3 @@ zstyle ':completion:*' expand prefix suffix
 if [ \( "x$COLORTERM" = "xgnome-terminal" -o "x$COLORTERM" = "xTerminal" -o "x$COLORTERM" = "xxfce4-terminal" \) -a "x$TERM" = "xxterm" ] && infocmp xterm-256color >/dev/null 2>&1; then
     TERM=xterm-256color
 fi
-
-export JDK_HOME="/usr/lib/jvm/java-7-oracle"
-
-# A little help for GnomeTerminal to retain current directory in the new tab
-source /etc/profile.d/vte.sh
