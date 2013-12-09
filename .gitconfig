@@ -59,3 +59,5 @@
 	la = "!git config -l | grep alias | cut -c 7-"
 [help]
 	autocorrect = 1
+[credential]
+	helper = cache
