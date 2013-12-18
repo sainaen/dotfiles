@@ -5,8 +5,8 @@
 # (Needs Git plugin for current_branch method)
 # ------------------------------------------------------------------------
 
-local default_username='username'
-local default_host='host'
+local default_username='sain'
+local default_host='gimli'
 
 # Color shortcuts
 RED=$fg[red]
