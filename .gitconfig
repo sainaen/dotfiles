@@ -7,14 +7,16 @@
 	editor = vim                       # editor
 	excludesfile = ~/.gitignore_global # global .gitignore file
 	fileMode = false                   # ignore file rights changes
+	autocrlf = false
+	eol = lf
 [merge]
 	summary = true                     # add commits summary when merging
 	tool = meld                        # use meld as mergetool
 
 [push]
-	# 'git push' will push the current branch to its tracking branch
-	# the usual default is to push all branches
-	default = tracking
+	# 'git push' will push the current branch to its tracking branch, even if
+	# upstream branch's name is different from the local one
+	default = upstream
 [pretty]
 	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar
 [alias]
