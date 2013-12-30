@@ -33,6 +33,3 @@ if [ \( "x$COLORTERM" = "xgnome-terminal" -o "x$COLORTERM" = "xTerminal" -o "x$C
 fi
 
 export JDK_HOME="/usr/lib/jvm/java-7-oracle"
-
-# A little help for GnomeTerminal to retain current directory in the new tab
-source /etc/profile.d/vte.sh
