@@ -6,8 +6,8 @@ set showcmd					" display incomplete commands
 filetype plugin indent on	" load file type plugins + indentation
 
 "" Whitespace
-set nowrap					" don't wrap lines
-set tabstop=4 shiftwidth=4	" a tab is 4 spaces
+set nowrap									" don't wrap lines
+set tabstop=4 shiftwidth=4 softtabstop=4 	" a tab is 4 spaces
 
 "" Searching
 set hlsearch				" highlight matches
