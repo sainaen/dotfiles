@@ -13,6 +13,9 @@ set showcmd
 " allow to use mouse (see :h mouse)
 set mouse=a
 
+" open new split panes to right and bottom
+set splitbelow splitright
+
 " allow wrapping but break properly
 set wrap linebreak
 
