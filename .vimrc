@@ -7,6 +7,9 @@ syntax enable
 " allow to switch from not saved buffers
 set hidden
 
+" show currently typed command
+set showcmd
+
 " allow to use mouse (see :h mouse)
 set mouse=a
 
