@@ -7,11 +7,11 @@ filetype plugin indent on					" load file type plugins + indentation
 set hidden									" make working with hidden buffers easier
 set mouse=a									" allow to use mouse (see :h mouse)
 
+set linebreak								" break properly
+
 "" Whitespace
-set nowrap									" don't wrap lines
 set tabstop=4 shiftwidth=4 softtabstop=4 	" a tab is 4 spaces
 set listchars=tab:›\ ,eol:¬					" use special chars for tab and EOL
-set list									" enable displaying of whitespaces by default
 
 "" Searching
 set hlsearch								" highlight matches
