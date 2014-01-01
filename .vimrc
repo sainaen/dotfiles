@@ -3,7 +3,6 @@ syntax enable
 
 set encoding=utf-8
 set showcmd									" display incomplete commands
-filetype plugin indent on					" load file type plugins + indentation
 set hidden									" make working with hidden buffers easier
 set mouse=a									" allow to use mouse (see :h mouse)
 
@@ -36,3 +35,13 @@ function! Preserve(command)
 	let @/ = _s
 	call cursor(l, c)
 endfunction
+
+filetype off								" required for Vundle
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle (required)
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on					" load file type plugins + indentation
