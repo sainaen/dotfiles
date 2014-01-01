@@ -20,6 +20,7 @@ set relativenumber							" use relative numbers
 
 "" Keymaps
 nmap <leader>l :set list!<CR>				" use \l to toggle whitespace displaying
+nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>	" use \$ to strip trailing spaces
 
 "" Util functions
 function! Preserve(command)
