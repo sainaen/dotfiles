@@ -5,6 +5,7 @@ set encoding=utf-8
 set showcmd									" display incomplete commands
 filetype plugin indent on					" load file type plugins + indentation
 set hidden									" make working with hidden buffers easier
+set mouse=a									" allow to use mouse (see :h mouse)
 
 "" Whitespace
 set nowrap									" don't wrap lines
