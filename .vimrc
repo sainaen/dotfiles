@@ -20,7 +20,7 @@ set wrap linebreak
 set tabstop=4 shiftwidth=4 softtabstop=4
 
 " use special chars for tab and EOL
-set listchars=tab:›\ ,eol:¬
+set listchars=tab:›\ ,eol:¬,trail:·
 
 " highlight matches and show them as I type
 set hlsearch incsearch showmatch
