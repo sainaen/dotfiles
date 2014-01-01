@@ -37,6 +37,9 @@ set relativenumber
 " custom keymap
 nmap <leader>l :set list!<CR>							" use \l to toggle whitespace displaying
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>		" use \$ to strip trailing spaces
+" reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
 
 " required for Vundle
 filetype off
