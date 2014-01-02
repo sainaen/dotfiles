@@ -1,36 +1,25 @@
 " no compatibility with legacy vi
 set nocompatible
-
 " enable syntax highlighting
 syntax enable
-
 " allow to switch from not saved buffers
 set hidden
-
 " show currently typed command
 set showcmd
-
 " allow to use mouse (see :h mouse)
 set mouse=a
-
 " open new split panes to right and bottom
 set splitbelow splitright
-
 " allow wrapping but break properly
 set wrap linebreak
-
 " a tab is 4 spaces
 set tabstop=4 shiftwidth=4 softtabstop=4
-
 " use special chars for tab and EOL
 set listchars=tab:›\ ,eol:¬,trail:·
-
 " highlight matches and show them as I type
 set hlsearch incsearch showmatch
-
 " searches are case insensitive unless they contain at leas one capital letter
 set ignorecase smartcase
-
 " use relative numbers
 set relativenumber
 
