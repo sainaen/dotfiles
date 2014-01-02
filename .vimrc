@@ -22,6 +22,12 @@ set hlsearch incsearch showmatch
 set ignorecase smartcase
 " use relative numbers
 set relativenumber
+" centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
 
 " custom keymap
 nmap <leader>l :set list!<CR>							" use \l to toggle whitespace displaying
