@@ -22,6 +22,8 @@ set hlsearch incsearch showmatch
 set ignorecase smartcase
 " use relative numbers
 set relativenumber
+" start scrolling three lines before the horizontal window border
+set scrolloff=3
 " centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
