@@ -56,6 +56,15 @@ inoremap jj <ESC>										" quit from insert mode with `jj`
 vnoremap < <gv
 vnoremap > >gv
 vnoremap = =gv
+" don't use arrow keys!
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " required for Vundle
 filetype off
