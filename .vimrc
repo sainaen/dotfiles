@@ -85,6 +85,9 @@ Bundle 'paredit.vim'
 " allows to traverse Vim's undo tree
 Bundle 'sjl/gundo.vim'
 
+" file system browser
+Bundle 'scrooloose/nerdtree'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
@@ -103,6 +106,9 @@ let g:ctrlp_show_hidden = 1
 
 " add a shortcut for Gundo
 nnoremap <Leader>u :GundoToggle<CR>
+
+" show/hide NerdTree window on ,f
+nnoremap <leader>f :NERDTreeToggle<CR>
 
 " function to preserve state when invoking commands that otherwise will change it
 function! Preserve(command)
