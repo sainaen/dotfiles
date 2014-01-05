@@ -25,9 +25,14 @@ set relativenumber
 " but show current line number too
 set number
 " highlight current line
-set cul
+set cursorline
 " start scrolling three lines before the horizontal window border
 set scrolloff=3
+" show command auto complete
+set wildmenu
+" and at first invocation try to auto complete till longest common string,
+" and then allow to cycle through matches
+set wildmode=longest:full,full
 " centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -68,14 +73,14 @@ Bundle 'kien/ctrlp.vim'
 " commenting
 Bundle 'tomtom/tcomment_vim'
 
-" allows to surround with quotes, tags, etc
+" allows to surround with quotes, tags, etc.
 Bundle 'tpope/vim-surround'
 
 " tries to balance opening and closing quotes, brackets, etc.
 " (similar to Emacs' paredit plugin)
 Bundle 'paredit.vim'
 
-" allows to travers Vim's undo tree
+" allows to traverse Vim's undo tree
 Bundle 'sjl/gundo.vim'
 
 " enable 256 colors in the terminal
