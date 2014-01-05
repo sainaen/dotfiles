@@ -54,6 +54,9 @@ Bundle 'sheerun/vim-polyglot'
 " fuzzy file search in current dir
 Bundle 'kien/ctrlp.vim'
 
+" commenting
+Bundle 'tomtom/tcomment_vim'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
