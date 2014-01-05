@@ -39,9 +39,11 @@ endif
 nmap <leader>l :set list!<CR>							" use \l to toggle whitespace displaying
 nmap <leader>p :set paste!<CR>							" swap with \p between paste mode or not
 nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>		" use \$ to strip trailing spaces
-" reselect visual block after indent/outdent
+inoremap jj <ESC>										" quit from insert mode with `jj`
+" reselect visual block after indent/outdent and reindenting
 vnoremap < <gv
 vnoremap > >gv
+vnoremap = =gv
 
 " required for Vundle
 filetype off
