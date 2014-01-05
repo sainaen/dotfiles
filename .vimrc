@@ -22,6 +22,10 @@ set hlsearch incsearch showmatch
 set ignorecase smartcase
 " use relative numbers
 set relativenumber
+" but show current line number too
+set number
+" highlight current line
+set cul
 " start scrolling three lines before the horizontal window border
 set scrolloff=3
 " centralize backups, swapfiles and undo history
