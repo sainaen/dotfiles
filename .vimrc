@@ -35,6 +35,11 @@ if exists('&undodir')
 	set undodir=~/.vim/undo
 endif
 
+" GUI
+if has("gui_gtk2")
+	set guifont=Meslo\ LG\ M\ 13,Droid\ Sans\ Mono\ 13,Monospace\ 13
+endif
+
 " custom keymap
 nmap <leader>l :set list!<CR>							" use \l to toggle whitespace displaying
 nmap <leader>p :set paste!<CR>							" swap with \p between paste mode or not
@@ -70,6 +75,9 @@ Bundle 'tpope/vim-surround'
 " (similar to Emacs' paredit plugin)
 Bundle 'paredit.vim'
 
+" allows to travers Vim's undo tree
+Bundle 'sjl/gundo.vim'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
@@ -85,6 +93,9 @@ colorscheme base16-default
 
 " make CtrlP to scan for dotfiles and dotdirs
 let g:ctrlp_show_hidden = 1
+
+" add a shortcut for Gundo
+nnoremap <Leader>u :GundoToggle<CR>
 
 " function to preserve state when invoking commands that otherwise will change it
 function! Preserve(command)
