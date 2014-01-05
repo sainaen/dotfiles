@@ -27,7 +27,7 @@ set scrolloff=3
 " centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
+if exists('&undodir')
 	set undodir=~/.vim/undo
 endif
 
@@ -57,6 +57,9 @@ Bundle 'kien/ctrlp.vim'
 " commenting
 Bundle 'tomtom/tcomment_vim'
 
+" allows to surround with quotes, tags, etc
+Bundle 'tpope/vim-surround'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
@@ -77,8 +80,8 @@ let g:ctrlp_show_hidden = 1
 function! Preserve(command)
 	" Save last search and cursor position
 	let _s = @/
-	let l = line(".")
-	let c = col(".")
+	let l = line('.')
+	let c = col('.')
 	" Do the business
 	execute a:command
 	" Restore
