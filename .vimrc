@@ -60,6 +60,10 @@ Bundle 'tomtom/tcomment_vim'
 " allows to surround with quotes, tags, etc
 Bundle 'tpope/vim-surround'
 
+" tries to balance opening and closing quotes, brackets, etc.
+" (similar to Emacs' paredit plugin)
+Bundle 'paredit.vim'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
