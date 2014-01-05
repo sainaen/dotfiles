@@ -47,10 +47,13 @@ if has("gui_gtk2")
 	set guifont=Meslo\ LG\ M\ 13,Droid\ Sans\ Mono\ 13,Monospace\ 13
 endif
 
+" remap leader key
+let mapleader = ','
 " custom keymap
-nmap <leader>l :set list!<CR>							" use \l to toggle whitespace displaying
-nmap <leader>p :set paste!<CR>							" swap with \p between paste mode or not
-nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>		" use \$ to strip trailing spaces
+nmap <leader>l :set list!<CR>							" use ,l to toggle whitespace displaying
+nmap <leader>p :set paste!<CR>							" swap with ,p between paste mode or not
+nmap <leader>$ :call Preserve("%s/\\s\\+$//e")<CR>		" use ,$ to strip trailing spaces
+nnoremap <leader><space> :nohlsearch<CR>				" stop search results highlighting with ,<space>
 inoremap jj <ESC>										" quit from insert mode with `jj`
 " reselect visual block after indent/outdent and reindenting
 vnoremap < <gv
