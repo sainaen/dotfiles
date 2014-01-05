@@ -51,6 +51,9 @@ Bundle 'gmarik/vundle'
 " language pack
 Bundle 'sheerun/vim-polyglot'
 
+" fuzzy file search in current dir
+Bundle 'kien/ctrlp.vim'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
@@ -63,6 +66,9 @@ filetype plugin indent on
 " use base16 default theme (dark variant)
 set background=dark
 colorscheme base16-default
+
+" make CtrlP to scan for dotfiles and dotdirs
+let g:ctrlp_show_hidden = 1
 
 " function to preserve state when invoking commands that otherwise will change it
 function! Preserve(command)
