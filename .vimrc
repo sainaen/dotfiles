@@ -48,8 +48,18 @@ call vundle#rc()
 " let Vundle manage Vundle (required)
 Bundle 'gmarik/vundle'
 
+" enable 256 colors in the terminal
+Bundle 'godlygeek/csapprox'
+
+" Base16 color theme
+Bundle 'chriskempson/base16-vim'
+
 " load file type plugins + indentation
 filetype plugin indent on
+
+" use base16 default theme (dark variant)
+set background=dark
+colorscheme base16-default
 
 " function to preserve state when invoking commands that otherwise will change it
 function! Preserve(command)
