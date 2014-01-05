@@ -33,6 +33,8 @@ set wildmenu
 " and at first invocation try to auto complete till longest common string,
 " and then allow to cycle through matches
 set wildmode=longest:full,full
+" enable status line even when there is only one window
+set laststatus=2
 " centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
