@@ -48,6 +48,9 @@ call vundle#rc()
 " let Vundle manage Vundle (required)
 Bundle 'gmarik/vundle'
 
+" language pack
+Bundle 'sheerun/vim-polyglot'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
