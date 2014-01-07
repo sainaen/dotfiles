@@ -12,7 +12,7 @@ ZSH_THEME="tomorrow"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git autojump zsh-syntax-highlighting npm)
+plugins=(git autojump zsh-syntax-highlighting npm lein)
 
 # Oh my zsh export
 source $ZSH/oh-my-zsh.sh
