@@ -28,6 +28,9 @@ zstyle ':completion:*' expand prefix suffix
 
 # Not a good idea, but I'm tired of those terminals
 # which just don't setup TERM properly. So here it is.
-export TERM=xterm-256color
+if [[ ! $TERM =~ "^.*256color$" ]]
+then
+	export TERM=xterm-256color
+fi
 
 export JDK_HOME="/usr/lib/jvm/java-7-oracle"
