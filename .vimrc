@@ -16,6 +16,8 @@ set wrap linebreak
 set tabstop=4 shiftwidth=4 softtabstop=4
 " use special chars for tab and EOL
 set listchars=tab:›\ ,eol:¬,trail:·
+" show whitespaces by default
+set list
 " highlight matches and show them as I type
 set hlsearch incsearch showmatch
 " searches are case insensitive unless they contain at leas one capital letter
