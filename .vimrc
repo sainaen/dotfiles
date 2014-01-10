@@ -88,6 +88,9 @@ Bundle 'gmarik/vundle'
 " language pack
 Bundle 'sheerun/vim-polyglot'
 
+" make vim recognize .gradle files as groovy
+Bundle 'tfnico/vim-gradle'
+
 " fuzzy file search in current dir
 Bundle 'kien/ctrlp.vim'
 
