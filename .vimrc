@@ -44,8 +44,19 @@ if exists('&undodir')
 	set undodir=~/.vim/undo
 endif
 
+" set default spell checking language
+setlocal spelllang=en_us
+
+" automatically enable spell checking
+if has('autocmd')
+	" for markdown files
+	autocmd BufRead,BufNewFile *.md setlocal spell
+	" and for git's commit message buffers
+	autocmd FileType gitcommit setlocal spell
+endif
+
 " GUI
-if has("gui_gtk2")
+if has('gui_gtk2')
 	set guifont=Meslo\ LG\ M\ 13,Droid\ Sans\ Mono\ 13,Monospace\ 13
 endif
 
