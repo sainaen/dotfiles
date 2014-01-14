@@ -50,7 +50,7 @@ setlocal spelllang=en_us
 " automatically enable spell checking
 if has('autocmd')
 	" for markdown files
-	autocmd BufRead,BufNewFile *.md setlocal spell
+	autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell
 	" and for git's commit message buffers
 	autocmd FileType gitcommit setlocal spell
 endif
