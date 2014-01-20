@@ -48,6 +48,7 @@ target/
 ##################
 build/
 .gradle
+.gradletasknamecache
 
 # Sublime project files #
 #########################

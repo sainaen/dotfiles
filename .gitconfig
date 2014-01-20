@@ -12,7 +12,6 @@
 [merge]
 	summary = true                     # add commits summary when merging
 	tool = meld                        # use meld as mergetool
-
 [push]
 	# 'git push' will push the current branch to its tracking branch, even if
 	# upstream branch's name is different from the local one
