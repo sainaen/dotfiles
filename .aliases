@@ -1,3 +1,4 @@
 alias l="/bin/ls -l --almost-all --color=always --file-type --human-readable --group-directories-first"
 alias v="vim"
 alias v.="vim ."
+alias tmux="tmux -2"
