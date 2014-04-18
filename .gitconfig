@@ -43,7 +43,7 @@
 	mt = mergetool
 	rc = rebase --continue
 # Branches
-	br = branch --verbose
+	br = branch --verbose --verbose        # be very verbose (with names of tracking branches)
 	bra = branch --verbose --all           # all branches
 	brm = branch --verbose --delete           # delete branch
 # Stash
