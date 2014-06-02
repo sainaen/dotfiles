@@ -38,3 +38,12 @@ function fs() {
                 du $arg .[^.]* *
         fi
 }
+
+# Drop stashes (may be zsh-dependent)
+function drop_stash() {
+	while [[ $(git stash list) != "" ]]
+	do
+		git stash drop
+	done
+}
+
