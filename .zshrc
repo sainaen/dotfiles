@@ -35,3 +35,4 @@ fi
 
 export JDK_HOME="/usr/lib/jvm/java-7-oracle"
 export EDITOR="vim"
+export TZ="/usr/share/zoneinfo/Europe/Kiev"
