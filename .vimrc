@@ -104,7 +104,7 @@ Bundle 'sheerun/vim-polyglot'
 Bundle 'tfnico/vim-gradle'
 
 " fuzzy file search in current dir
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 
 " commenting
 Bundle 'tomtom/tcomment_vim'
