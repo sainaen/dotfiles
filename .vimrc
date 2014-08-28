@@ -122,6 +122,9 @@ Bundle 'sjl/gundo.vim'
 " file system browser
 Bundle 'scrooloose/nerdtree'
 
+" Clojure REPL intregration
+Bundle 'tpope/vim-fireplace'
+
 " enable 256 colors in the terminal
 Bundle 'godlygeek/csapprox'
 
