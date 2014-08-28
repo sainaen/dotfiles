@@ -47,3 +47,10 @@ function drop_stash() {
 	done
 }
 
+function calc() {
+	if [ $# = 0 ]; then
+		echo "Usage: $0 2+2*2"
+	else
+		echo "$@" | bc -l
+	fi
+}
