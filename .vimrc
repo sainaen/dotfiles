@@ -67,6 +67,10 @@ let mapleader = ','
 nmap <leader>w :set list!<CR>
 " swap with ,p between paste mode or not
 nmap <leader>p :set paste!<CR>
+" copying into X buffer
+nmap <leader>y "+y
+" pasting from X buffer
+nmap <leader>p "+p
 " use ,t to strip trailing spaces
 nmap <leader>t :call Preserve("%s/\\s\\+$//e")<CR>
 " stop search results highlighting with ,<space>
