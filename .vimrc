@@ -89,6 +89,7 @@ nnoremap <right> <nop>
 
 " required for Vundle
 filetype off
+set shell=/bin/sh
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
