@@ -65,16 +65,17 @@ let mapleader = ','
 " custom keymap
 " use ,w to toggle whitespace displaying
 nmap <leader>w :set list!<CR>
-" swap with ,p between paste mode or not
-nmap <leader>p :set paste!<CR>
-" copying into X buffer
-nmap <leader>y "+y
-" pasting from X buffer
+" use <leader>, p|d|y to work with X Server buffer
+vmap <leader>y "+y
+vmap <leader>d "+d
 nmap <leader>p "+p
-" use ,t to strip trailing spaces
+nmap <leader>P "+P
+vmap <leader>p "+p
+vmap <leader>P "+P
+" use <leader>,t to strip trailing spaces
 nmap <leader>t :call Preserve("%s/\\s\\+$//e")<CR>
-" stop search results highlighting with ,<space>
-nnoremap <leader><space> :nohlsearch<CR>
+" stop search results highlighting with <leader>,h
+nnoremap <leader>h :nohlsearch<CR>
 " quit from insert mode with `jj`
 inoremap jj <ESC>
 " reselect visual block after indent/outdent and reindenting
@@ -142,7 +143,7 @@ colorscheme base16-default
 let g:ctrlp_show_hidden = 1
 
 " add a shortcut for Gundo
-nnoremap <Leader>u :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 
 " show/hide NerdTree window on ,f
 nnoremap <leader>f :NERDTreeToggle<CR>
