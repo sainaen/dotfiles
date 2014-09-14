@@ -61,7 +61,7 @@ if has('gui_gtk2')
 endif
 
 " remap leader key
-let mapleader = ','
+let mapleader = "\<Space>"
 " custom keymap
 " use ,w to toggle whitespace displaying
 nmap <leader>w :set list!<CR>
