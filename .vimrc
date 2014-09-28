@@ -96,41 +96,41 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle (required)
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " language pack
-Bundle 'sheerun/vim-polyglot'
+Plugin 'sheerun/vim-polyglot'
 
 " make vim recognize .gradle files as groovy
-Bundle 'tfnico/vim-gradle'
+Plugin 'tfnico/vim-gradle'
 
 " fuzzy file search in current dir
-" Bundle 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 
 " commenting
-Bundle 'tomtom/tcomment_vim'
+Plugin 'tomtom/tcomment_vim'
 
 " allows to surround with quotes, tags, etc.
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " tries to balance opening and closing quotes, brackets, etc.
 " (similar to Emacs' paredit plugin)
-Bundle 'paredit.vim'
+Plugin 'paredit.vim'
 
 " allows to traverse Vim's undo tree
-Bundle 'sjl/gundo.vim'
+Plugin 'sjl/gundo.vim'
 
 " file system browser
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " Clojure REPL intregration
-Bundle 'tpope/vim-fireplace'
+Plugin 'tpope/vim-fireplace'
 
 " enable 256 colors in the terminal
-Bundle 'godlygeek/csapprox'
+Plugin 'godlygeek/csapprox'
 
 " Base16 color theme
-Bundle 'chriskempson/base16-vim'
+Plugin 'chriskempson/base16-vim'
 
 " load file type plugins + indentation
 filetype plugin indent on
