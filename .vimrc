@@ -105,7 +105,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tfnico/vim-gradle'
 
 " fuzzy file search in current dir
-" Plugin 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " commenting
 Plugin 'tomtom/tcomment_vim'
