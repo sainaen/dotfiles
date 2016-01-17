@@ -50,6 +50,7 @@
 	sl = stash list
 	ss = stash save --include-untracked # Stash untracked files too
 	sa = stash apply
+	ssp = stash show -p
 # Ignore
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
