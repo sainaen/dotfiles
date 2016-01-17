@@ -70,7 +70,7 @@ cpwd() {
 
 # Prompt format
 PROMPT='
-%{$GREEN_BOLD%}`username`%{$BLUE_BOLD%}`cpwd`%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
+%{$GREEN_BOLD%}`username`%{$BLUE_BOLD%}`cpwd`%u$(parse_git_dirty)$(git_remote_status)%{$RESET_COLOR%}
 `prompt_char`%{$RESET_COLOR%} '
 
 RPROMPT='$(git_prompt_status)  %{$GREEN_BOLD%}$(current_branch)%{$RESET_COLOR%}'
