@@ -33,6 +33,7 @@ then
 	export TERM=xterm-256color
 fi
 
-export JDK_HOME="/usr/lib/jvm/java-7-oracle"
+export JDK_HOME="/usr/lib/jvm/java-8-oracle"
+export ELM_HOME="/usr/lib/node_modules/elm/share"
 export EDITOR="vim"
 export TZ="/usr/share/zoneinfo/Europe/Kiev"
