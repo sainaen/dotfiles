@@ -59,7 +59,7 @@ endif
 
 " GUI
 if has('gui_gtk2')
-	set guifont=Meslo\ LG\ M\ 13,Droid\ Sans\ Mono\ 13,Monospace\ 13
+	set guifont=Fira\ Mono\ Medium\ 14,Meslo\ LG\ M\ 13,Droid\ Sans\ Mono\ 13,Monospace\ 13
 endif
 
 " remap leader key
