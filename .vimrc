@@ -102,6 +102,8 @@ Plugin 'gmarik/vundle'
 
 " language pack
 Plugin 'sheerun/vim-polyglot'
+" elm syntax highlighting
+Plugin 'lambdatoast/elm.vim'
 
 " make vim recognize .gradle files as groovy
 Plugin 'tfnico/vim-gradle'
