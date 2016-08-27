@@ -23,7 +23,7 @@ set hlsearch incsearch showmatch
 " searches are case insensitive unless they contain at leas one capital letter
 set ignorecase smartcase
 " use relative numbers
-set relativenumber
+" set relativenumber
 " but show current line number too
 set number
 " highlight current line
