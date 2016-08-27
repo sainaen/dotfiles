@@ -3,3 +3,4 @@ alias v="vim"
 alias v.="vim ."
 alias tmux="tmux -2"
 alias auu='apt update && apt upgrade'
+alias gw='./gradlew'
