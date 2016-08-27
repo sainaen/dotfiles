@@ -14,6 +14,8 @@ set splitbelow splitright
 set wrap linebreak
 " a tab is 4 spaces
 set tabstop=4 shiftwidth=4 softtabstop=4
+" expand tab into spaces
+set expandtab
 " use special chars for tab and EOL
 set listchars=tab:›\ ,eol:¬,trail:·
 " show whitespaces by default
