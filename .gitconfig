@@ -9,6 +9,8 @@
 	fileMode = false                   # ignore file rights changes
 	autocrlf = false
 	eol = lf
+[interactive]
+	singleKey = true
 [merge]
 	summary = true                     # add commits summary when merging
 	tool = meld                        # use meld as mergetool
