@@ -146,8 +146,7 @@ Plugin 'chriskempson/base16-vim'
 filetype plugin indent on
 
 " use base16 default theme (dark variant)
-set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
 
 " make CtrlP to scan for dotfiles and dotdirs
 let g:ctrlp_show_hidden = 1
