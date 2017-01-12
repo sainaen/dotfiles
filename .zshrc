@@ -16,6 +16,10 @@ plugins=(git autojump zsh-syntax-highlighting history-substring-search)
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
+# Hoard *ALL* history
+HISTSIZE=450000
+SAVEHIST=400000 # slightly less, to store dupes
+
 # Oh my zsh export
 source $ZSH/oh-my-zsh.sh
 
