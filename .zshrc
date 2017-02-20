@@ -12,7 +12,7 @@ ZSH_THEME="tomorrow"
 COMPLETION_WAITING_DOTS="true"
 
 # Plugins
-plugins=(git autojump zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git autojump zsh-syntax-highlighting) # disabled for now: zsh-autosuggestions
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
@@ -22,6 +22,9 @@ SAVEHIST=400000 # slightly less, to store dupes
 
 # Oh my zsh export
 source $ZSH/oh-my-zsh.sh
+
+# greyish-blue-green
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=66'
 
 # Functions export
 source $HOME/.functions
