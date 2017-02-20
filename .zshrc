@@ -16,15 +16,15 @@ plugins=(git autojump zsh-syntax-highlighting) # disabled for now: zsh-autosugge
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-# Hoard *ALL* history
-HISTSIZE=450000
-SAVEHIST=400000 # slightly less, to store dupes
-
 # Oh my zsh export
 source $ZSH/oh-my-zsh.sh
 
 # greyish-blue-green
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=66'
+
+# Hoard *ALL* history (overrides oh-my-zsh defaults)
+HISTSIZE=450000
+SAVEHIST=400000 # slightly less, to store dupes
 
 # Functions export
 source $HOME/.functions
