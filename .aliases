@@ -1,6 +1,7 @@
-alias l="/bin/ls --format=single-column --no-group --color=always --file-type --human-readable --group-directories-first"
-alias ll="/bin/ls --format=long --no-group --color=always --file-type --human-readable --group-directories-first"
-alias la="/bin/ls --format=long --almost-all --color=always --file-type --human-readable --group-directories-first"
+alias l="/bin/ls --format=long --no-group --color=always --file-type --human-readable --group-directories-first"
+alias ll="/bin/ls --format=long --almost-all --color=always --file-type --human-readable --group-directories-first"
+alias lx="/bin/ls --format=horizontal --no-group --color=always --file-type --human-readable --group-directories-first"
+alias llx="/bin/ls --format=horizontal --almost-all --color=always --file-type --human-readable --group-directories-first"
 alias v="vim"
 alias tmux="tmux -2"
 alias auu='apt update && apt upgrade'
