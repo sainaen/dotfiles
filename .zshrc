@@ -42,9 +42,6 @@ then
 	export TERM=xterm-256color
 fi
 
-export JDK_HOME="/usr/lib/jvm/java-8-oracle"
-export ELM_HOME="/usr/lib/node_modules/elm/share"
-
 if [ -e '/etc/profile.d/vte.sh' ]
 then
     source /etc/profile.d/vte.sh
@@ -52,3 +49,6 @@ fi
 
 export EDITOR="vim"
 export TZ="/usr/share/zoneinfo/Europe/Kiev"
+
+export JDK_HOME="/usr/lib/jvm/java-8-oracle"
+export ELM_HOME="/usr/lib/node_modules/elm/share"
