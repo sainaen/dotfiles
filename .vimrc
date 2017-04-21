@@ -94,11 +94,11 @@ nnoremap <right> <nop>
 filetype off
 set shell=/bin/sh
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle (required)
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " language pack
 Plugin 'sheerun/vim-polyglot'
@@ -142,6 +142,8 @@ endif
 " Base16 color theme
 Plugin 'chriskempson/base16-vim'
 
+" End plugin loading
+call vundle#end()
 " load file type plugins + indentation
 filetype plugin indent on
 
