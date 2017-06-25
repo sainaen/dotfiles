@@ -1,6 +1,7 @@
 [user]
 	name = sainaen
 	email = sainaen@gmail.com
+	signingkey = B07989D8986AC565
 [color]
 	ui = always                        # always use colours
 [core]
