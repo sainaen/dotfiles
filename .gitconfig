@@ -20,7 +20,7 @@
 	# upstream branch's name is different from the local one
 	default = upstream
 [pretty]
-	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%cn%C(reset) %C(bold black)%ar
+	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%aN%C(reset) %C(blue)[%cN:%C(green)%G?%C(blue)]%C(reset) %C(dim)%cr
 [alias]
 # Log
 	l = log --oneline --format=complete
