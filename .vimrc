@@ -125,16 +125,18 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-" Base16 color theme
+" color schemes
 Plugin 'chriskempson/base16-vim'
+Plugin 'NLKNguyen/papercolor-theme'
 
 " End plugin loading
 call vundle#end()
 " load file type plugins + indentation
 filetype plugin indent on
 
-" use base16 default theme (dark variant)
-colorscheme base16-default-dark
+" use PaperColor scheme
+set background=light
+colorscheme PaperColor
 
 " make CtrlP to scan for dotfiles and dotdirs
 let g:ctrlp_show_hidden = 1
