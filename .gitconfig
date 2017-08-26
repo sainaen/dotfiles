@@ -68,3 +68,8 @@
 	helper = cache
 [commit]
 	gpgsign = true # sign every commit, even without '--gpg-sign'
+[sendemail]
+	smtpEncryption = tls
+	smtpServer = smtp.gmail.com
+	smtpUser = sainaen@gmail.com
+	smtpServerPort = 587
