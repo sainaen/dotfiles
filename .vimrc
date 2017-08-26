@@ -100,11 +100,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " language pack
 Plugin 'sheerun/vim-polyglot'
-" elm syntax highlighting
-Plugin 'lambdatoast/elm.vim'
-
-" make vim recognize .gradle files as groovy
-Plugin 'tfnico/vim-gradle'
 
 " fuzzy file search in current dir
 Plugin 'kien/ctrlp.vim'
@@ -115,18 +110,11 @@ Plugin 'tomtom/tcomment_vim'
 " allows to surround with quotes, tags, etc.
 Plugin 'tpope/vim-surround'
 
-" tries to balance opening and closing quotes, brackets, etc.
-" (similar to Emacs' paredit plugin)
-Plugin 'paredit.vim'
-
 " allows to traverse Vim's undo tree
 Plugin 'sjl/gundo.vim'
 
 " file system browser
 Plugin 'scrooloose/nerdtree'
-
-" Clojure REPL intregration
-Plugin 'tpope/vim-fireplace'
 
 " enable 256 colors in the terminal
 Plugin 'godlygeek/csapprox'
