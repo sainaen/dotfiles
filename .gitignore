@@ -1,3 +1,4 @@
 !.vim/bundle/vundle
 .vim/bundle/*
 .vim/swaps/*
+.vim/spell/*
