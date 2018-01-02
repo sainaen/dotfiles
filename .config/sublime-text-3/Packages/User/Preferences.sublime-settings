@@ -1,37 +1,39 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Mariana.tmTheme",
 	"default_line_ending": "unix",
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
 	"fallback_encoding": "Cyrillic (Windows 1251)",
-	"font_face": "Meslo LG M",
+	"font_face": "Fira Code",
 	"font_options":
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 11,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"SublimeLinter Beta",
-		"Theme - Soda",
-		"SublimeGit",
-		"Emmet"
 	],
 	"indent_guide_options":
 	[
 		"draw_active"
 	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"margin": 0,
 	"rulers":
 	[
-		72,
-		80
+		80,
+		120
 	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"spacegray_fileicons": true,
 	"tab_size": 4,
-	"theme": "Soda Dark 3.sublime-theme",
-	"translate_tabs_to_spaces": false,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true
 }
