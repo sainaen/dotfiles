@@ -11,7 +11,7 @@
 	autocrlf = false
 	eol = lf
 [interactive]
-	singleKey = true
+	singleKey = true                   # requires 'apt install libterm-readkey-perl'
 [merge]
 	summary = true                     # add commits summary when merging
 	tool = meld                        # use meld as mergetool
