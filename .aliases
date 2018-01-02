@@ -5,4 +5,4 @@ alias llx="/bin/ls --format=horizontal --almost-all --color=always --file-type -
 alias v="vim"
 alias tmux="tmux -2"
 alias auu='sudo apt update && sudo apt upgrade'
-alias gw='./gradlew'
+alias gw='./gradlew --daemon'
