@@ -38,20 +38,18 @@
 	ca = commit --amend
 	r = reset
 	rh = reset --hard
-	pf = push --force
 	d = diff
 	dc = diff --staged
-	dt = !git-diffall
-	mf = merge --no-ff --edit
-	mt = mergetool
 	rc = rebase --continue
+	# checkout a pull request from a github repository
+	pr = !"pr() { git fetch origin pull/$1/head:pr-$1; git checkout pr-$1; }; pr"
 # Branches
 	br = branch --verbose --verbose        # be very verbose (with names of tracking branches)
 	bra = branch --verbose --all           # all branches
-	brm = branch --verbose --delete           # delete branch
+	brm = branch --verbose --delete        # delete branch
 # Stash
 	sl = stash list
-	ss = stash save --include-untracked # Stash untracked files too
+	ss = stash save --include-untracked    # stash untracked files too
 	sa = stash apply
 	ssp = stash show -p
 # Ignore
