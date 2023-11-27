@@ -1,0 +1,8 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+sudo apt install --no-install-recommends \
+  pcscd \
+  yubikey-agent
+
+{{- end }}

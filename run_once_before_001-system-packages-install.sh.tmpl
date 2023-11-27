@@ -1,0 +1,76 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+sudo apt update
+
+# CLI:
+sudo apt install --no-install-recommends \
+  7zip \
+  borgbackup \
+  bpython \
+  curl \
+  eza \
+  fdupes \
+  fzf \
+  git \
+  htop \
+  hugo \
+  libterm-readkey-perl \
+  imagemagick \
+  jq \
+  mc \
+  mkcert \
+  mtr-tiny \
+  neovim \
+  openjdk-11-jdk-headless \
+  openjdk-11-source \
+  openjdk-17-jdk-headless \
+  openjdk-17-source \
+  openjdk-21-jdk-headless \
+  openjdk-21-source \
+  parallel \
+  profile-sync-daemon \
+  pv \
+  python-is-python3 \
+  python3-pip \
+  python3-venv \
+  ripgrep \
+  rsync \
+  sqlite3 \
+  syncthing \
+  tcpdump \
+  tmux \
+  tree \
+  ufw \
+  whois \
+  xxd \
+  zip \
+  zsh
+
+# CLI: tdrop dependencies
+sudo apt install --no-install-recommends \
+  gawk \
+  wmctrl \
+  x11-utils \
+  xdotool
+
+# UI:
+sudo apt install --no-install-recommends \
+  eog \
+  eog-plugin-exif-display \
+  file-roller \
+  fonts-noto-color-emoji \
+  gimp \
+  gnome-characters \
+  gnome-tweaks \
+  handbrake \
+  inkscape \
+  kitty \
+  mpv \
+  nautilus \
+  smplayer \
+  wireshark
+
+{{- end }}

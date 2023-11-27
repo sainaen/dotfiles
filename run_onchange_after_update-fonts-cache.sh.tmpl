@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env sh
+
+set -eu
+
+# hash of fonts:
+{{ $fontsPath := joinPath .chezmoi.homeDir ".local" "share" "fonts" "**" "*.ttf" }}
+{{ range $f := glob $fontsPath }}# {{ $f }}: {{ include $f | sha1sum }}
+{{ end }}
+
+fc-cache -fv
+
+{{- end }}

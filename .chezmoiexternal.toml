@@ -1,0 +1,14 @@
+{{ $tdropVersion := "0.5.0" -}}
+[".local/bin/tdrop"]
+  type = "archive-file"
+  url = "https://codeload.github.com/noctuid/tdrop/tar.gz/refs/tags/{{ $tdropVersion }}"
+  path = "tdrop-0.5.0/tdrop"
+
+{{ $iosevkaVersion := "27.3.5" -}}
+{{ $iosevkaVariant := "ss08" -}}
+[".local/share/fonts/Iosevka SS08"]
+  type = "archive"
+  url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/ttf-iosevka-{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
+[".local/share/fonts/Iosevka Fixed SS08"]
+  type = "archive"
+  url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/ttf-iosevka-fixed-{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"

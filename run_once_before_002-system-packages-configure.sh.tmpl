@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -eu
+
+# change shell
+chsh --shell /bin/zsh "$USER"
+
+{{ if eq .chezmoi.os "linux" -}}
+# allow capturing pakets without running Wireshark from root
+sudo /usr/sbin/usermod -aG wireshark sain
+
+# allow current user to use overlayfs for profile-sync-daemon
+echo "$USER ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo tee /etc/sudoers.d/"${USER}-psd" 2>/dev/null
+{{- end }}

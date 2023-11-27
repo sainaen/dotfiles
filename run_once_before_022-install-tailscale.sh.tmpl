@@ -1,0 +1,27 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# 1) add Tailscale's repository
+# https://tailscale.com/kb/1044/install-debian-sid/
+
+wget -q https://pkgs.tailscale.com/stable/debian/sid.gpg -O- | \
+  sudo tee /etc/apt/keyrings/pkgs.tailscale.com.asc > /dev/null
+
+cat <<-EOF | sudo tee /etc/apt/sources.list.d/tailscale.list > /dev/null 
+deb [signed-by=/etc/apt/keyrings/pkgs.tailscale.com.asc] https://pkgs.tailscale.com/stable/debian sid main
+EOF
+
+cat <<-EOF | sudo tee /etc/apt/preferences.d/pkgs.tailscale.com.pref > /dev/null
+Package: *
+Pin: origin pkgs.tailscale.com
+Pin-Priority: 100
+EOF
+
+# 2) install
+
+sudo apt-get update
+sudo apt-get install tailscale tailscale-archive-keyring
+
+{{- end }}

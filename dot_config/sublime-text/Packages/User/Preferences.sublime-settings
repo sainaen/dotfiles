@@ -1,0 +1,22 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"color_scheme": "auto",
+	"font_face": "Iosevka Fixed SS08",
+	"font_size": 15,
+	"highlight_line": true,
+	"scroll_context_lines": 3,
+	"draw_white_space": [
+		"selection", "trailing", "isolated", "leading_mixed"
+	],
+	"ensure_newline_at_eof_on_save": true,
+	"indent_guide_options": [
+		"draw_active_single"
+	],
+	"fallback_encoding": "Cyrillic (Windows 1251)",
+	"default_line_ending": "unix",
+	"ignored_packages": [],
+	"vintage_start_in_command_mode": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+}

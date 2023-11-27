@@ -1,0 +1,27 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# 1) add Mozilla's repository
+# https://blog.nightly.mozilla.org/2023/10/30/introducing-mozillas-firefox-nightly-deb-packages-for-debian-based-linux-distributions/
+
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | \
+  sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+
+cat <<-EOF | sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null 
+deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main
+EOF
+ 
+cat <<-EOF | sudo tee /etc/apt/preferences.d/packages.mozilla.org.pref > /dev/null
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 100
+EOF
+
+# 2) install
+
+sudo apt-get update
+sudo apt-get install firefox-nightly
+
+{{- end }}

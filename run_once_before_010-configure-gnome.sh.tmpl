@@ -1,0 +1,44 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# make keyboard “quick”
+gsettings set org.gnome.desktop.peripherals.keyboard delay 250
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 14
+
+# configure US and UA keyboard layouts
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ua')]"
+
+# caps-lock is a compose key, right Alt is AltGr
+gsettings set org.gnome.desktop.input-sources xkb-options "['compose:caps', 'lv3:ralt_switch']"
+
+# input sources like on Mac
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Control>space']"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<Shift><Control>space']"
+
+# night light settings
+gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4000
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
+gsettings set org.gnome.settings-daemon.plugins.color night-light-last-coordinates '(50.0, 30.0)'
+
+# text/fonts
+gsettings set org.gnome.desktop.interface font-hinting "'full'"
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+
+# I *love* me hot corners
+gsettings set org.gnome.desktop.interface enable-hot-corners 'true'
+
+# tdrop custom keys: Kitty
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "tdrop kitty"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "$HOME/.local/bin/tdrop -a -h '100%' -P 'wmctrl -i -r \$wid -b add,above,sticky' kitty -o hide_window_decorations=yes"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "Pause"
+# tdrop custom keys: Kitty (bottom)
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name "tdrop kitty (bottom)"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command "$HOME/.local/bin/tdrop -a -y '60%' -h '40%' -P 'wmctrl -i -r \$wid -b add,above,sticky' kitty -o hide_window_decorations=yes"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding "<Shift>Pause"
+# declare the new bindings
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+
+{{- end }}

@@ -1,0 +1,12 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# not sure if it's any different from the version with `curl | sh` method
+sudo apt-get install rustup
+
+# install Rust stable
+rustup toolchain install stable
+
+{{- end }}

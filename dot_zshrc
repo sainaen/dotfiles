@@ -1,0 +1,10 @@
+# completition stuff: load completitions (only from secure directories, no warnings)
+autoload -U compinit
+compinit -i
+
+# Load all the .ZSH files from ~/.zsh
+for zsh_tweak_file (~/.zsh/*.zsh); do
+  source "$zsh_tweak_file"
+done
+unset zsh_tweak_file
+

@@ -1,0 +1,69 @@
+[user]
+	name = Ivan Vyshnevskyi
+	email = {{ .email }}
+[core]
+	editor = vim                       # editor
+	excludesfile = ~/.gitignore_global # global .gitignore file
+	fileMode = false                   # ignore file rights changes
+	autocrlf = false
+	eol = lf
+[interactive]
+	singleKey = true                   # requires 'apt install libterm-readkey-perl'
+[merge]
+	summary = true                     # add commits summary when merging
+[push]
+	# 'git push' will push the current branch to its tracking branch, even if
+	# upstream branch's name is different from the local one
+	default = upstream
+[pretty]
+	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%aN%C(reset) %C(dim)%cr [%cs]
+[alias]
+# Log
+	l = log --oneline --format=complete
+	lg = log --oneline --format=complete --graph
+	ll = log --format=complete --all
+	llg = log --format=complete --all --graph
+	lp = log --patch -1 # latest commit patch
+# Common aliases
+	co = checkout
+	sw = switch
+	st = status --short --branch
+	a = add --interactive
+	au = add --update
+	aa = add --all
+	c = commit
+	ca = commit --amend
+	r = reset
+	rh = reset --hard
+	d = diff
+	dc = diff --staged
+	rc = rebase --continue
+# Branches
+	br = branch --verbose --verbose        # be very verbose (with names of tracking branches)
+	bra = branch --verbose --all           # all branches
+	brm = branch --verbose --delete        # delete branch
+# Stash
+	sl = stash list
+	ss = stash save --include-untracked    # stash untracked files too
+	sa = stash apply
+	ssp = stash show -p
+# Ignore
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep '^[a-z]'
+# Undo
+	uc = reset --soft HEAD^
+# List all aliases
+	la = "!git config -l | grep alias | cut -c 7-"
+[help]
+	autocorrect = 10                       # autocorrect mistakes faster
+[credential]
+	helper = cache
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
+[includeIf "gitdir:~/work/"]
+	path = ~/work/.gitconfig
+[diff]
+	algorithm = patience

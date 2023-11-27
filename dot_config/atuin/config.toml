@@ -1,0 +1,5 @@
+# run completely locally
+auto_sync = false
+
+# we are installing through nix, so no need to check for updates
+update_check = false

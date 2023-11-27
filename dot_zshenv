@@ -1,0 +1,20 @@
+# do not do compinit in /etc/zsh/zshrc
+export skip_global_compinit=1
+
+# (src: https://wiki.archlinux.org/title/zsh#Configuring_$PATH)
+# $path is a proper array view into $PATH
+# `typeset -U` means that ZSH will ensure that it has only unique values
+typeset -U path
+# replace existing global $PATH completely, because I can't find where it's set and `/usr/bin/games` in it annoys me
+path=(
+  ~/.local/bin
+  ~/.nix-profile/bin
+  /nix/var/nix/profiles/default/bin
+  /usr/local/bin
+  /usr/bin
+  /bin
+)
+
+export EDITOR=vim
+
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"

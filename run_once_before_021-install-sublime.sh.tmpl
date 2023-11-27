@@ -1,0 +1,27 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# 1) add SublimeHQ's repository
+# https://www.sublimetext.com/docs/linux_repositories.html#apt
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | \
+  sudo tee /etc/apt/keyrings/download.sublimetext.com.asc > /dev/null
+
+cat <<-EOF | sudo tee /etc/apt/sources.list.d/sublime.list > /dev/null 
+deb [signed-by=/etc/apt/keyrings/download.sublimetext.com.asc] https://download.sublimetext.com/ apt/stable/
+EOF
+ 
+cat <<-EOF | sudo tee /etc/apt/preferences.d/download.sublimetext.com.pref > /dev/null
+Package: *
+Pin: origin download.sublimetext.com
+Pin-Priority: 100
+EOF
+
+# 2) install
+
+sudo apt-get update
+sudo apt-get install sublime-text
+
+{{- end }}
