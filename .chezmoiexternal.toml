@@ -4,6 +4,7 @@
   url = "https://codeload.github.com/noctuid/tdrop/tar.gz/refs/tags/{{ $tdropVersion }}"
   path = "tdrop-0.5.0/tdrop"
 
+# Iosevka SS08 == Pragmata Pro Style
 {{ $iosevkaVersion := "27.3.5" -}}
 {{ $iosevkaVariant := "ss08" -}}
 [".local/share/fonts/Iosevka SS08"]
@@ -12,3 +13,11 @@
 [".local/share/fonts/Iosevka Fixed SS08"]
   type = "archive"
   url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/ttf-iosevka-fixed-{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
+
+{{ $zshVersion := "bb27265aeeb0a22fb77f1275118a5edba260ec47" -}}
+[".zsh/plugins/zsh-syntax-highlighting"]
+  type = "archive"
+  url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/{{ $zshVersion }}.tar.gz"
+  exact = true
+  stripComponents = 1
+  include = ["*/*.zsh", "*/.version", "*/.revision-hash", "*/highlighters/**"]

@@ -15,6 +15,10 @@ path=(
   /bin
 )
 
+# (src: https://github.com/zsh-users/zsh-syntax-highlighting/blob/bb27265a/docs/highlighters.md#highlighter-independent-settings)
+# limit syntax highlighting to commands with <=512 chars
+export ZSH_HIGHLIGHT_MAXLENGTH=512
+
 export EDITOR=vim
 
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
