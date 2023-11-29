@@ -1,11 +1,8 @@
+{{ if eq .chezmoi.os "linux" -}}
 #!/usr/bin/env bash
 
 set -eu
 
-# change shell
-chsh --shell /bin/zsh "$USER"
-
-{{ if eq .chezmoi.os "linux" -}}
 # allow capturing pakets without running Wireshark from root
 sudo /usr/sbin/usermod -aG wireshark sain
 

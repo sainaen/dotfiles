@@ -5,7 +5,6 @@ set -eu
 
 sudo apt update
 
-# CLI:
 sudo apt install --no-install-recommends \
   7zip \
   borgbackup \
@@ -48,29 +47,5 @@ sudo apt install --no-install-recommends \
   xxd \
   zip \
   zsh
-
-# CLI: tdrop dependencies
-sudo apt install --no-install-recommends \
-  gawk \
-  wmctrl \
-  x11-utils \
-  xdotool
-
-# UI:
-sudo apt install --no-install-recommends \
-  eog \
-  eog-plugin-exif-display \
-  file-roller \
-  fonts-noto-color-emoji \
-  gimp \
-  gnome-characters \
-  gnome-tweaks \
-  handbrake \
-  inkscape \
-  kitty \
-  mpv \
-  nautilus \
-  smplayer \
-  wireshark
 
 {{- end }}

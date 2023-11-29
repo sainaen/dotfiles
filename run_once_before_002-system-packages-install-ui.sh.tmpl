@@ -1,0 +1,24 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+sudo apt update
+
+sudo apt install --no-install-recommends \
+  eog \
+  eog-plugin-exif-display \
+  file-roller \
+  fonts-noto-color-emoji \
+  gimp \
+  gnome-characters \
+  gnome-tweaks \
+  handbrake \
+  inkscape \
+  kitty \
+  mpv \
+  nautilus \
+  smplayer \
+  wireshark
+
+{{- end }}

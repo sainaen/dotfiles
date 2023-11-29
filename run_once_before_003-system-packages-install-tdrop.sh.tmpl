@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+sudo apt update
+
+# tdrop dependencies
+# (https://github.com/noctuid/tdrop)
+sudo apt install --no-install-recommends \
+  gawk \
+  wmctrl \
+  x11-utils \
+  xdotool
+
+{{- end }}
