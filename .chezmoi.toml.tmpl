@@ -1,4 +1,6 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $aocSessionCookie := promptStringOnce . "aocSessionCookie" "AoC session cookie" -}}
 
 [data]
     email = {{ $email | quote }}
+    aocSessionCookie = {{ $aocSessionCookie | quote }}
