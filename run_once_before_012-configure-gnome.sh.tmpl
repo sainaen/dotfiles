@@ -30,6 +30,11 @@ gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
 # I *love* me hot corners
 gsettings set org.gnome.desktop.interface enable-hot-corners 'true'
 
+# be less sleepy: 20m before lock-screen, 30m before automatic suspend
+gsettings set org.gnome.desktop.session idle-delay 1200
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 1800
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+
 # tdrop custom keys: Kitty
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "tdrop kitty"
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "$HOME/.local/bin/tdrop -a -h '100%' -P 'wmctrl -i -r \$wid -b add,above,sticky' kitty -o hide_window_decorations=yes"
