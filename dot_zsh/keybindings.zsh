@@ -73,3 +73,7 @@ bindkey -M viins '\e.' insert-last-word
 # (src: https://stackoverflow.com/a/16777568)
 unsetopt flow_control
 bindkey -M viins '^Q' push-line
+
+# make backspace work after hidden line (with Ctrl-Q) is restored
+# (src: https://unix.stackexchange.com/a/290403)
+bindkey -M viins '^?' backward-delete-char
