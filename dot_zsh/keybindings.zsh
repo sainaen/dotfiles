@@ -67,3 +67,9 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 # allow alt+. to insert last word from the previous command in vim insert mode
 # (src: https://unix.stackexchange.com/a/696981)
 bindkey -M viins '\e.' insert-last-word
+
+# Ctrl-Q temporarily hides the current command
+# have to explicitly add the binding for the vim insert mode
+# (src: https://stackoverflow.com/a/16777568)
+unsetopt flow_control
+bindkey -M viins '^Q' push-line
