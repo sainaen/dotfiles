@@ -30,10 +30,10 @@ gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
 # I *love* me hot corners
 gsettings set org.gnome.desktop.interface enable-hot-corners 'true'
 
-# be less sleepy: 20m before lock-screen, 30m before automatic suspend
+# be less sleepy: 20m before lock-screen, never do automatic suspend because of the issues with touchpad bluetooth (probably?)
 gsettings set org.gnome.desktop.session idle-delay 1200
 gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 1800
-gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'suspend'
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
 
 # tdrop custom keys: Kitty
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "tdrop kitty"
