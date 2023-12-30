@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+
+# refs:
+#  https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sourcing-external.html
+#  https://developer.1password.com/docs/cli/secret-references/
+#  https://tenmilesquare.com/resources/security/how-to-use-1password-to-securely-store-your-aws-credentials/
+#  https://github.com/claui/aws-credential-1password
+
+import argparse
+import json
+import sys
+import subprocess
+
+
+def print_creds_from_1p(vault, item, id_field, secret_field):
+	output_template = dict(
+		Version=1,
+		AccessKeyId=f"op://{vault}/{item}/{id_field}",
+		SecretAccessKey=f"op://{vault}/{item}/{secret_field}"
+	)
+	try:
+		subprocess.run(
+			['op', 'inject'],
+			input=json.dumps(output_template).encode('utf-8'),
+			check=True)
+	except subprocess.CalledProcessError as e:
+		sys.exit(e.returncode)
+
+
+def main():
+	parser = argparse.ArgumentParser(
+		prog='aws-1p-creds-helper',
+		description='Provides API keys from 1Password to AWS CLI')
+	parser.add_argument('--vault', required=True, help='Vault name or ID')
+	parser.add_argument('--item', required=True, help='Item name or ID')
+	parser.add_argument(
+		'--key-id-field',
+		required=False,
+		help='Name or ID of the field with AWS Access Key ID',
+		default='access key id')
+	parser.add_argument(
+		'--key-secret-field',
+		required=False,
+		help='Name or ID of the field with AWS Secret Access Key',
+		default='secret access key')
+	args = parser.parse_args()
+	print_creds_from_1p(args.vault, args.item, args.key_id_field, args.key_secret_field)
+
+
+if __name__ == '__main__':
+	main()

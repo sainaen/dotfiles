@@ -1,0 +1,7 @@
+[profile static_sites]
+# op items get --vault rjgywmuasdykylnjbt2y4juwwq 6yyz3h2m524yyqxopmpzi44fmm
+credential_process = aws-1p-creds-helper --vault rjgywmuasdykylnjbt2y4juwwq --item 6yyz3h2m524yyqxopmpzi44fmm
+
+[profile static_sites_tf]
+# op items get --vault rjgywmuasdykylnjbt2y4juwwq 7tlcdjd5vzrwmawimmsh3kzk5e
+credential_process = aws-1p-creds-helper --vault rjgywmuasdykylnjbt2y4juwwq --item 7tlcdjd5vzrwmawimmsh3kzk5e
