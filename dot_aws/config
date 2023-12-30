@@ -5,3 +5,7 @@ credential_process = aws-1p-creds-helper --vault rjgywmuasdykylnjbt2y4juwwq --it
 [profile static_sites_tf]
 # op items get --vault rjgywmuasdykylnjbt2y4juwwq 7tlcdjd5vzrwmawimmsh3kzk5e
 credential_process = aws-1p-creds-helper --vault rjgywmuasdykylnjbt2y4juwwq --item 7tlcdjd5vzrwmawimmsh3kzk5e
+
+[profile gl]
+region = eu-central-1
+output = text
