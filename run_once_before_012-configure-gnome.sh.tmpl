@@ -49,4 +49,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 # generate thumbnails even for remote files (mainly for NAS)
 gsettings set org.gnome.nautilus.preferences show-image-thumbnails 'always'
 
+# show folders first in Nautilus
+gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true
+
 {{- end }}
