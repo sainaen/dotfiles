@@ -46,4 +46,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 # declare the new bindings
 gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
 
+# generate thumbnails even for remote files (mainly for NAS)
+gsettings set org.gnome.nautilus.preferences show-image-thumbnails 'always'
+
 {{- end }}
