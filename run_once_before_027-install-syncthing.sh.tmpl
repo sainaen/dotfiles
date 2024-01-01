@@ -1,0 +1,27 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# 1) add Syncthing's repository
+# https://apt.syncthing.net/
+
+wget -q https://syncthing.net/release-key.gpg -O- | \
+  sudo gpg --enarmor --output /etc/apt/keyrings/apt.syncthing.net.asc > /dev/null
+
+cat <<-EOF | sudo tee /etc/apt/sources.list.d/syncthing.list > /dev/null
+deb [arch=amd64 signed-by=/etc/apt/keyrings/apt.syncthing.net.asc] https://apt.syncthing.net/ syncthing stable
+EOF
+
+cat <<-EOF | sudo tee /etc/apt/preferences.d/apt.syncthing.net.pref > /dev/null
+Package: *
+Pin: origin apt.syncthing.net
+Pin-Priority: 100
+EOF
+
+# 2) install
+
+sudo apt-get update
+sudo apt-get install syncthing
+
+{{- end }}
