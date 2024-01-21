@@ -1,0 +1,28 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# 1) add Hashicorp's repository
+# https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+# https://www.hashicorp.com/official-packaging-guide?product_intent=terraform
+
+wget -qO - https://apt.releases.hashicorp.com/gpg | \
+  sudo tee /etc/apt/keyrings/apt.releases.hashicorp.com.asc > /dev/null
+
+cat <<-EOF | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null 
+deb [signed-by=/etc/apt/keyrings/apt.releases.hashicorp.com.asc] https://apt.releases.hashicorp.com bookworm main
+EOF
+ 
+cat <<-EOF | sudo tee /etc/apt/preferences.d/apt.releases.hashicorp.com.pref > /dev/null
+Package: *
+Pin: origin apt.releases.hashicorp.com
+Pin-Priority: 100
+EOF
+
+# 2) install
+
+sudo apt-get update
+sudo apt-get install terraform
+
+{{- end }}
