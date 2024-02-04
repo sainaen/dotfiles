@@ -1,0 +1,22 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+sudo apt update
+
+# gnome development dependencies
+sudo apt install --no-install-recommends \
+  libadwaita-1-dev \
+  libgtk-4-dev
+
+# gnome examples
+sudo apt install --no-install-recommends \
+  gtk-4-examples \
+  libadwaita-1-examples
+
+# other rill deps
+sudo apt install --no-install-recommends \
+  libssl-dev
+
+{{- end }}
