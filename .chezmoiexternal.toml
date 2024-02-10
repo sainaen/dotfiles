@@ -21,3 +21,11 @@
   exact = true
   stripComponents = 1
   include = ["*/*.zsh", "*/.version", "*/.revision-hash", "*/highlighters/**"]
+
+{{ $zshCompsVersion := "507f1f8715edd9f1f403c140fa332644d81ebab5" -}}
+[".zsh/completitions"]
+  type = "archive"
+  url = "https://github.com/zsh-users/zsh-completions/archive/{{ $zshCompsVersion }}.tar.gz"
+  exact = true
+  stripComponents = 2
+  include = ["*/src/_golang", "*/src/_mkcert", "*/src/_node", "*/src/_openssl"]

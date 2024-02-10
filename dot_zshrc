@@ -1,5 +1,7 @@
-# completition stuff: load completitions (only from secure directories, no warnings)
 autoload -U compinit
+# include custom completitions
+fpath+=~/.zsh/completitions
+# completition stuff: load completitions (only from secure directories, no warnings)
 compinit -i
 
 # load all the .ZSH files from ~/.zsh
