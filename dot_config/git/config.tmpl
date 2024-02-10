@@ -1,22 +1,40 @@
 [user]
 	name = Ivan Vyshnevskyi
 	email = {{ .email }}
+[branch]
+	sort = -committerdate              # sort branches from newest to oldest
 [core]
 	editor = vim                       # editor
-	excludesfile = ~/.gitignore_global # global .gitignore file
 	fileMode = false                   # ignore file rights changes
 	autocrlf = false
 	eol = lf
+[credential]
+	helper = cache
+[diff]
+	algorithm = patience
+[help]
+	autocorrect = 10                   # autocorrect mistakes faster
+[init]
+	defaultBranch = main
 [interactive]
 	singleKey = true                   # requires 'apt install libterm-readkey-perl'
+[log]
+	date = format-local:%Y-%m-%d %H:%M:%S
 [merge]
+	conflictStyle = zdiff3             # show 3-way conflicts
 	summary = true                     # add commits summary when merging
+[pretty]
+	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%aN%C(reset) %C(dim)%cr [%cd]
+[pull]
+	ff = only
 [push]
 	# 'git push' will push the current branch to its tracking branch, even if
 	# upstream branch's name is different from the local one
 	default = upstream
-[pretty]
-	complete = %C(yellow)%h %C(green)%d %C(reset)%s %C(cyan)%aN%C(reset) %C(dim)%cr [%cs]
+	autoSetupRemote = true             # assume '--set-upstream' on push if no tracking set up
+[rerere]
+	enabled = true
+	autoUpdate = true
 [alias]
 # Log
 	l = log --oneline --format=complete
@@ -38,6 +56,7 @@
 	d = diff
 	dc = diff --staged
 	rc = rebase --continue
+	pushf = push --force-with-lease
 # Branches
 	br = branch --verbose --verbose        # be very verbose (with names of tracking branches)
 	bra = branch --verbose --all           # all branches
@@ -55,15 +74,5 @@
 	uc = reset --soft HEAD^
 # List all aliases
 	la = "!git config -l | grep alias | cut -c 7-"
-[help]
-	autocorrect = 10                       # autocorrect mistakes faster
-[credential]
-	helper = cache
-[pull]
-	ff = only
-[init]
-	defaultBranch = main
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig
-[diff]
-	algorithm = patience
