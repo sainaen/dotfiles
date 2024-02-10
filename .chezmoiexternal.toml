@@ -5,14 +5,14 @@
   path = "tdrop-0.5.0/tdrop"
 
 # Iosevka SS08 == Pragmata Pro Style
-{{ $iosevkaVersion := "27.3.5" -}}
-{{ $iosevkaVariant := "ss08" -}}
+{{ $iosevkaVersion := "28.1.0" -}}
+{{ $iosevkaVariant := "SS08" -}}
 [".local/share/fonts/Iosevka SS08"]
   type = "archive"
-  url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/ttf-iosevka-{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
+  url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/PkgTTF-Iosevka{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
 [".local/share/fonts/Iosevka Fixed SS08"]
   type = "archive"
-  url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/ttf-iosevka-fixed-{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
+  url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/PkgTTF-IosevkaFixed{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
 
 {{ $zshVersion := "db085e4661f6aafd24e5acb5b2e17e4dd5dddf3e" -}}
 [".zsh/plugins/zsh-syntax-highlighting"]
