@@ -14,7 +14,7 @@
   type = "archive"
   url = "https://github.com/be5invis/Iosevka/releases/download/v{{ $iosevkaVersion }}/ttf-iosevka-fixed-{{ $iosevkaVariant }}-{{ $iosevkaVersion }}.zip"
 
-{{ $zshVersion := "bb27265aeeb0a22fb77f1275118a5edba260ec47" -}}
+{{ $zshVersion := "db085e4661f6aafd24e5acb5b2e17e4dd5dddf3e" -}}
 [".zsh/plugins/zsh-syntax-highlighting"]
   type = "archive"
   url = "https://github.com/zsh-users/zsh-syntax-highlighting/archive/{{ $zshVersion }}.tar.gz"
