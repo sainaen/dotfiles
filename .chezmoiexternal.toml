@@ -29,3 +29,14 @@
   exact = true
   stripComponents = 2
   include = ["*/src/_golang", "*/src/_mkcert", "*/src/_node", "*/src/_openssl"]
+
+{{ $obsidianVersion := "1.5.8" -}}
+[".local/bin/Obsidian.AppImage"]
+  type = "file"
+  url = "https://github.com/obsidianmd/obsidian-releases/releases/download/v{{ $obsidianVersion }}/Obsidian-{{ $obsidianVersion }}.AppImage"
+  executable = true
+
+[".local/share/icons/hicolor/scalable/apps/obsidian.svg"]
+  type = "file"
+  url = "https://obsidian.md/images/obsidian-logo-gradient.svg"
+  checksum.sha256 = "119b01b96c99f736098742c329f440313b6763bd2aea22cafe08179699431280"
