@@ -40,3 +40,9 @@
   type = "file"
   url = "https://obsidian.md/images/obsidian-logo-gradient.svg"
   checksum.sha256 = "119b01b96c99f736098742c329f440313b6763bd2aea22cafe08179699431280"
+
+{{ $flyVersion := "0.2.80" -}}
+[".local/bin/fly"]
+  type = "archive-file"
+  url = "https://github.com/superfly/flyctl/releases/download/v{{ $flyVersion }}/flyctl_{{ $flyVersion}}_Linux_amd64.tar.gz"
+  path = "flyctl"
