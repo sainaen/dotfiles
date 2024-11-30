@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+sudo apt update
+
+sudo apt install --no-install-recommends \
+  epubcheck
+
+{{- end }}
