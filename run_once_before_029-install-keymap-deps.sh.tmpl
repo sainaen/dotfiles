@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+sudo apt update
+
+# https://github.com/zsa/wally/wiki/Linux-install
+sudo apt install --no-install-recommends \
+  libgtk-3-0t64 \
+  libwebkit2gtk-4.1-0 \
+  libusb-1.0-0
+
+{{- end }}
