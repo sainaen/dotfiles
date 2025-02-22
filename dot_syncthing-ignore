@@ -1,5 +1,6 @@
 /.cache
 /.config/syncthing
+/.config/1Password/logs
 /.dropbox
 /GDrive
 /Videos
