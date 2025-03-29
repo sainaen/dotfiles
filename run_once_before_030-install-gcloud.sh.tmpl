@@ -1,0 +1,27 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+# 1) add Google Cloud's repository
+# https://cloud.google.com/sdk/docs/install#deb
+
+wget -q https://packages.cloud.google.com/apt/doc/apt-key.gpg -O- | \
+  sudo gpg --dearmor -o /etc/apt/keyrings/packages.cloud.google.com.asc > /dev/null
+
+cat <<-EOF | sudo tee /etc/apt/sources.list.d/gcloud.list > /dev/null 
+deb [signed-by=/etc/apt/keyrings/packages.cloud.google.com.asc] https://packages.cloud.google.com/apt cloud-sdk main
+EOF
+
+cat <<-EOF | sudo tee /etc/apt/preferences.d/gcloud.pref > /dev/null
+Package: *
+Pin: origin packages.cloud.google.com
+Pin-Priority: 100
+EOF
+
+# 2) install
+
+sudo apt-get update
+sudo apt-get install --no-install-recommends --no-install-suggests google-cloud-cli
+
+{{- end }}
